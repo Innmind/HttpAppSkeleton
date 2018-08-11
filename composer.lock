@@ -4,8 +4,1449 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "afc8726fa4fbdc473b36ce5b34a73e2d",
-    "packages": [],
+    "content-hash": "693a18143abb33ececdc107736751129",
+    "packages": [
+        {
+            "name": "innmind/compose",
+            "version": "1.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/Compose.git",
+                "reference": "f46a8b0c14c7d076422cc2a605e4abfb507736af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/Compose/zipball/f46a8b0c14c7d076422cc2a605e4abfb507736af",
+                "reference": "f46a8b0c14c7d076422cc2a605e4abfb507736af",
+                "shasum": ""
+            },
+            "require": {
+                "innmind/immutable": "~2.7",
+                "innmind/url": "^2.0",
+                "innmind/url-resolver": "^3.0",
+                "php": "~7.2",
+                "psr/container": "^1.0",
+                "symfony/config": "~3.0|^4.0",
+                "symfony/options-resolver": "~3.0|^4.0",
+                "symfony/yaml": "~3.0|~4.0"
+            },
+            "require-dev": {
+                "giorgiosironi/eris": "^0.9.0",
+                "innmind/graphviz": "^1.1",
+                "innmind/server-control": "^2.1",
+                "innmind/stream": "^1.3",
+                "mnapoli/silly": "^1.7",
+                "phpunit/phpunit": "~6.0"
+            },
+            "suggest": {
+                "innmind/graphviz": "To be able to use the compose binary",
+                "innmind/server-control": "To be able to use the compose binary",
+                "innmind/stream": "To be able to use the compose binary",
+                "mnapoli/silly": "To be able to use the compose binary"
+            },
+            "bin": [
+                "bin/compose"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\Compose\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Service locator",
+            "homepage": "http://github.com/Innmind/Compose",
+            "keywords": [
+                "PSR-11",
+                "dependency",
+                "injection",
+                "locator",
+                "service"
+            ],
+            "time": "2018-08-05T08:40:17+00:00"
+        },
+        {
+            "name": "innmind/event-bus",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/EventBus.git",
+                "reference": "b6ba4c14e62c75785fd4a6ce47167b2b3bc4e488"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/EventBus/zipball/b6ba4c14e62c75785fd4a6ce47167b2b3bc4e488",
+                "reference": "b6ba4c14e62c75785fd4a6ce47167b2b3bc4e488",
+                "shasum": ""
+            },
+            "require": {
+                "innmind/compose": "^1.0",
+                "innmind/immutable": "~2.0",
+                "php": "~7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\EventBus\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Event dispatcher library",
+            "homepage": "http://github.com/Innmind/EventBus",
+            "keywords": [
+                "dispatcher",
+                "event"
+            ],
+            "time": "2018-02-25T11:53:24+00:00"
+        },
+        {
+            "name": "innmind/filesystem",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/Filesystem.git",
+                "reference": "554274130bb1c8b1ba6681c4f83ad9a0c142e833"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/Filesystem/zipball/554274130bb1c8b1ba6681c4f83ad9a0c142e833",
+                "reference": "554274130bb1c8b1ba6681c4f83ad9a0c142e833",
+                "shasum": ""
+            },
+            "require": {
+                "innmind/event-bus": "~2.0",
+                "innmind/immutable": "~2.0",
+                "innmind/stream": "^1.3",
+                "php": "~7.1",
+                "symfony/filesystem": "^3.0|~4.0",
+                "symfony/finder": "~3.0|~4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\Filesystem\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Filesystem abstraction layer",
+            "homepage": "http://github.com/Innmind/filesystem",
+            "keywords": [
+                "filesystem"
+            ],
+            "time": "2018-04-02T14:40:49+00:00"
+        },
+        {
+            "name": "innmind/http",
+            "version": "3.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/Http.git",
+                "reference": "dfc1608809798d59a24b2359527da2f781208018"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/Http/zipball/dfc1608809798d59a24b2359527da2f781208018",
+                "reference": "dfc1608809798d59a24b2359527da2f781208018",
+                "shasum": ""
+            },
+            "require": {
+                "innmind/filesystem": "~3.0",
+                "innmind/immutable": "~2.1",
+                "innmind/stream": "^1.3",
+                "innmind/time-continuum": "^1.0",
+                "innmind/url": "~2.0",
+                "php": "~7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0",
+                "psr/http-message": "^1.0",
+                "symfony/http-foundation": "^3.0|^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Value Objects to abstract http messages",
+            "homepage": "http://github.com/Innmind/Http",
+            "keywords": [
+                "Value Object",
+                "http"
+            ],
+            "time": "2018-08-04T10:57:06+00:00"
+        },
+        {
+            "name": "innmind/http-server",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/HttpServer.git",
+                "reference": "fdc4970675848e2c77ae2d6f42329d4a5cafc398"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/HttpServer/zipball/fdc4970675848e2c77ae2d6f42329d4a5cafc398",
+                "reference": "fdc4970675848e2c77ae2d6f42329d4a5cafc398",
+                "shasum": ""
+            },
+            "require": {
+                "innmind/filesystem": "^3.2",
+                "innmind/http": "^3.5",
+                "php": "~7.2"
+            },
+            "require-dev": {
+                "giorgiosironi/eris": "^0.9.0",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\HttpServer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Http server",
+            "homepage": "http://github.com/Innmind/HttpServer",
+            "keywords": [
+                "http",
+                "server"
+            ],
+            "time": "2018-08-04T12:03:59+00:00"
+        },
+        {
+            "name": "innmind/immutable",
+            "version": "2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/Immutable.git",
+                "reference": "5205fec6fd223c50b52b9b277cbb7a30ea38677a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/Immutable/zipball/5205fec6fd223c50b52b9b277cbb7a30ea38677a",
+                "reference": "5205fec6fd223c50b52b9b277cbb7a30ea38677a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\Immutable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Immutable PHP primitive wrappers",
+            "homepage": "http://github.com/Innmind/Immutable",
+            "keywords": [
+                "immutable",
+                "wrapper"
+            ],
+            "time": "2018-02-25T11:18:49+00:00"
+        },
+        {
+            "name": "innmind/stream",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/Stream.git",
+                "reference": "d587dd8f35f1fe3207e8a3b560e9d6fb47e5028c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/Stream/zipball/d587dd8f35f1fe3207e8a3b560e9d6fb47e5028c",
+                "reference": "d587dd8f35f1fe3207e8a3b560e9d6fb47e5028c",
+                "shasum": ""
+            },
+            "require": {
+                "innmind/immutable": "^2.3",
+                "innmind/time-continuum": "^1.0",
+                "php": "~7.1"
+            },
+            "require-dev": {
+                "innmind/server-control": "^1.2",
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\Stream\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Wrapper to PHP stream functions",
+            "homepage": "http://github.com/Innmind/Stream",
+            "keywords": [
+                "stream"
+            ],
+            "time": "2018-03-03T12:02:12+00:00"
+        },
+        {
+            "name": "innmind/time-continuum",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/TimeContinuum.git",
+                "reference": "b69cf221fa52b81dc4065af1957d843a774e990d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/TimeContinuum/zipball/b69cf221fa52b81dc4065af1957d843a774e990d",
+                "reference": "b69cf221fa52b81dc4065af1957d843a774e990d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\TimeContinuum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Library to manipulate time",
+            "homepage": "http://github.com/Innmind/TimeContinuum",
+            "keywords": [
+                "time"
+            ],
+            "time": "2018-04-28T14:03:34+00:00"
+        },
+        {
+            "name": "innmind/url",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/Url.git",
+                "reference": "4bdcc65ddc2a63cd560f22aeeb9b5e1fb968c80a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/Url/zipball/4bdcc65ddc2a63cd560f22aeeb9b5e1fb968c80a",
+                "reference": "4bdcc65ddc2a63cd560f22aeeb9b5e1fb968c80a",
+                "shasum": ""
+            },
+            "require": {
+                "innmind/immutable": "~2.0",
+                "league/uri": "~5.0",
+                "php": "~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\Url\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Library to abstract url handling",
+            "homepage": "http://github.com/Innmind/Url",
+            "keywords": [
+                "url"
+            ],
+            "time": "2017-11-30T07:16:59+00:00"
+        },
+        {
+            "name": "innmind/url-resolver",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Innmind/url-resolver.git",
+                "reference": "83a6a2477165490242087fd1850501f2af213ca3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Innmind/url-resolver/zipball/83a6a2477165490242087fd1850501f2af213ca3",
+                "reference": "83a6a2477165490242087fd1850501f2af213ca3",
+                "shasum": ""
+            },
+            "require": {
+                "innmind/immutable": "~2.0",
+                "innmind/url": "^2.0",
+                "php": "~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Innmind\\UrlResolver\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Baptiste Langlade",
+                    "email": "langlade.baptiste@gmail.com"
+                }
+            ],
+            "description": "Library to resolve relative urls to absolute ones",
+            "homepage": "http://github.com/Innmind/url-resolver",
+            "keywords": [
+                "resolver",
+                "uri",
+                "url"
+            ],
+            "time": "2018-02-15T11:06:26+00:00"
+        },
+        {
+            "name": "league/uri",
+            "version": "5.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri.git",
+                "reference": "f2bceb755f1108758cf4cf925e4cd7699ce686aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri/zipball/f2bceb755f1108758cf4cf925e4cd7699ce686aa",
+                "reference": "f2bceb755f1108758cf4cf925e4cd7699ce686aa",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "ext-intl": "*",
+                "ext-mbstring": "*",
+                "league/uri-components": "^1.8",
+                "league/uri-hostname-parser": "^1.1",
+                "league/uri-interfaces": "^1.0",
+                "league/uri-manipulations": "^1.5",
+                "league/uri-parser": "^1.4",
+                "league/uri-schemes": "^1.2",
+                "php": ">=7.0.13",
+                "psr/http-message": "^1.0"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "URI manipulation library",
+            "homepage": "http://uri.thephpleague.com",
+            "keywords": [
+                "data-uri",
+                "file-uri",
+                "ftp",
+                "hostname",
+                "http",
+                "https",
+                "middleware",
+                "parse_str",
+                "parse_url",
+                "psr-7",
+                "query-string",
+                "querystring",
+                "rfc3986",
+                "rfc3987",
+                "uri",
+                "url",
+                "ws"
+            ],
+            "time": "2018-03-14T17:19:39+00:00"
+        },
+        {
+            "name": "league/uri-components",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-components.git",
+                "reference": "b796a9dc4f3cb51d3ac026cb0b159a02a24a8ad1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-components/zipball/b796a9dc4f3cb51d3ac026cb0b159a02a24a8ad1",
+                "reference": "b796a9dc4f3cb51d3ac026cb0b159a02a24a8ad1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-fileinfo": "*",
+                "ext-intl": "*",
+                "league/uri-hostname-parser": "^1.1.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.3",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-phpunit": "^0.9.4",
+                "phpstan/phpstan-strict-rules": "^0.9.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "URI components manipulation library",
+            "homepage": "http://uri.thephpleague.com",
+            "keywords": [
+                "authority",
+                "components",
+                "fragment",
+                "host",
+                "path",
+                "port",
+                "query",
+                "rfc3986",
+                "scheme",
+                "uri",
+                "url",
+                "userinfo"
+            ],
+            "time": "2018-07-06T06:37:27+00:00"
+        },
+        {
+            "name": "league/uri-hostname-parser",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-hostname-parser.git",
+                "reference": "7a6be3d06d0ed08dcb51f666aa60f3b66cd51325"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-hostname-parser/zipball/7a6be3d06d0ed08dcb51f666aa60f3b66cd51325",
+                "reference": "7a6be3d06d0ed08dcb51f666aa60f3b66cd51325",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "php": ">=7.0",
+                "psr/simple-cache": "^1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.7",
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^6.3"
+            },
+            "suggest": {
+                "ext-curl": "To use the bundle cURL HTTP client",
+                "psr/simple-cache-implementation": "To enable using other cache providers"
+            },
+            "bin": [
+                "bin/update-psl-icann-section"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Kendall",
+                    "homepage": "http://about.me/jeremykendall",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "homepage": "http://nyamsprod.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/phpleague/uri-hostname-parser/graphs/contributors"
+                }
+            ],
+            "description": "ICANN base hostname parsing implemented in PHP.",
+            "homepage": "https://github.com/thephphleague/uri-hostname-parser",
+            "keywords": [
+                "Public Suffix List",
+                "domain parsing",
+                "icann"
+            ],
+            "time": "2018-02-16T07:29:26+00:00"
+        },
+        {
+            "name": "league/uri-interfaces",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-interfaces.git",
+                "reference": "b5063ffb8b129923c8988f1d4061fdeea53b47b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-interfaces/zipball/b5063ffb8b129923c8988f1d4061fdeea53b47b9",
+                "reference": "b5063ffb8b129923c8988f1d4061fdeea53b47b9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "Common interface for URI representation",
+            "homepage": "http://github.com/thephpleague/uri-interfaces",
+            "keywords": [
+                "rfc3986",
+                "rfc3987",
+                "uri",
+                "url"
+            ],
+            "time": "2018-05-22T12:10:22+00:00"
+        },
+        {
+            "name": "league/uri-manipulations",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-manipulations.git",
+                "reference": "ae8d49a3203ccf7a1e39aaf7fae9f08bfbc454a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-manipulations/zipball/ae8d49a3203ccf7a1e39aaf7fae9f08bfbc454a2",
+                "reference": "ae8d49a3203ccf7a1e39aaf7fae9f08bfbc454a2",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "league/uri-components": "^1.8.0",
+                "league/uri-interfaces": "^1.0",
+                "php": ">=7.0",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "guzzlehttp/psr7": "^1.2",
+                "league/uri-schemes": "^1.2",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-phpunit": "^0.9.4",
+                "phpstan/phpstan-strict-rules": "^0.9.0",
+                "phpunit/phpunit": "^6.0",
+                "zendframework/zend-diactoros": "1.4.0"
+            },
+            "suggest": {
+                "league/uri-schemes": "Allow manipulating URI objects"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "URI manipulation library",
+            "homepage": "http://url.thephpleague.com",
+            "keywords": [
+                "formatter",
+                "manipulation",
+                "manipulations",
+                "middlewares",
+                "modifiers",
+                "psr-7",
+                "references",
+                "rfc3986",
+                "rfc3987",
+                "uri",
+                "url"
+            ],
+            "time": "2018-03-14T16:44:57+00:00"
+        },
+        {
+            "name": "league/uri-parser",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-parser.git",
+                "reference": "8beb28540744a5ad728aee7060100002f9196f46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-parser/zipball/8beb28540744a5ad728aee7060100002f9196f46",
+                "reference": "8beb28540744a5ad728aee7060100002f9196f46",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-phpunit": "^0.9.4",
+                "phpstan/phpstan-strict-rules": "^0.9.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "suggest": {
+                "ext-intl": "Allow parsing RFC3987 compliant hosts",
+                "league/uri-schemes": "Allow validating and normalizing URI parsing results"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "userland URI parser RFC 3986 compliant",
+            "homepage": "https://github.com/thephpleague/uri-parser",
+            "keywords": [
+                "parse_url",
+                "parser",
+                "rfc3986",
+                "rfc3987",
+                "uri",
+                "url"
+            ],
+            "time": "2018-03-13T21:13:33+00:00"
+        },
+        {
+            "name": "league/uri-schemes",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/uri-schemes.git",
+                "reference": "c26aedac0f60d1ce915aa309e1d08a4b09c7d708"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/uri-schemes/zipball/c26aedac0f60d1ce915aa309e1d08a4b09c7d708",
+                "reference": "c26aedac0f60d1ce915aa309e1d08a4b09c7d708",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "league/uri-interfaces": "^1.0",
+                "league/uri-parser": "^1.4.0",
+                "php": ">=7.0.13",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-phpunit": "^0.9.4",
+                "phpstan/phpstan-strict-rules": "^0.9.0",
+                "phpunit/phpunit": "^6.0"
+            },
+            "suggest": {
+                "ext-intl": "Allow parsing RFC3987 compliant hosts",
+                "league/uri-manipulations": "Needed to easily manipulate URI objects"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Uri\\": "src"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "email": "nyamsprod@gmail.com",
+                    "homepage": "https://nyamsprod.com"
+                }
+            ],
+            "description": "URI manipulation library",
+            "homepage": "http://uri.thephpleague.com",
+            "keywords": [
+                "data-uri",
+                "file",
+                "ftp",
+                "http",
+                "https",
+                "parse_url",
+                "psr-7",
+                "rfc3986",
+                "uri",
+                "url",
+                "ws",
+                "wss"
+            ],
+            "time": "2018-03-14T08:33:20+00:00"
+        },
+        {
+            "name": "psr/container",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "time": "2017-02-14T16:28:37+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "symfony/config",
+            "version": "v4.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/config.git",
+                "reference": "c868972ac26e4e19860ce11b300bb74145246ff9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/config/zipball/c868972ac26e4e19860ce11b300bb74145246ff9",
+                "reference": "c868972ac26e4e19860ce11b300bb74145246ff9",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/filesystem": "~3.4|~4.0",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/finder": "<3.4"
+            },
+            "require-dev": {
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~3.4|~4.0",
+                "symfony/finder": "~3.4|~4.0",
+                "symfony/yaml": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/yaml": "To use the yaml reference dumper"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Config\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Config Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-07-26T11:24:31+00:00"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v4.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "2e30335e0aafeaa86645555959572fe7cea22b43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/2e30335e0aafeaa86645555959572fe7cea22b43",
+                "reference": "2e30335e0aafeaa86645555959572fe7cea22b43",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-07-26T11:24:31+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v4.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "e162f1df3102d0b7472805a5a9d5db9fcf0a8068"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/e162f1df3102d0b7472805a5a9d5db9fcf0a8068",
+                "reference": "e162f1df3102d0b7472805a5a9d5db9fcf0a8068",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-07-26T11:24:31+00:00"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "v4.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "1913f1962477cdbb13df951f8147d5da1fe2412c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/1913f1962477cdbb13df951f8147d5da1fe2412c",
+                "reference": "1913f1962477cdbb13df951f8147d5da1fe2412c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2018-07-26T08:55:25+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2018-08-06T14:22:27+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v4.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "46bc69aa91fc4ab78a96ce67873a6b0c148fd48c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/46bc69aa91fc4ab78a96ce67873a6b0c148fd48c",
+                "reference": "46bc69aa91fc4ab78a96ce67873a6b0c148fd48c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "symfony/console": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-07-26T11:24:31+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
