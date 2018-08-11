@@ -7,6 +7,14 @@ use Innmind\Compose\ContainerBuilder\ContainerBuilder;
 use Innmind\Url\{
     PathInterface,
     Path,
+    Url,
+};
+use Innmind\Http\{
+    Message\ServerRequest\ServerRequest,
+    Message\Response,
+    Message\Method\Method,
+    ProtocolVersion\ProtocolVersion,
+    Headers\Headers,
 };
 use Innmind\Immutable\{
     Map,
@@ -37,5 +45,20 @@ class TestCase extends BaseTestCase
     protected function container(): ContainerInterface
     {
         return $this->container;
+    }
+
+    protected function request(
+        string $method,
+        string $url,
+        array $headers = []
+    ): Response {
+        return $this->container()->get('requestHandler')(
+            new ServerRequest(
+                Url::fromString($url),
+                new Method(strtoupper($method)),
+                new ProtocolVersion(1, 1),
+                Headers::of(...$headers)
+            )
+        );
     }
 }

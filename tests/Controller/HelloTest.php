@@ -5,13 +5,7 @@ namespace Tests\AppName\Controller;
 
 use AppName\Controller\Hello;
 use Innmind\HttpFramework\Controller;
-use Innmind\Http\{
-    Message\ServerRequest\ServerRequest,
-    Message\Response,
-    Message\Method\Method,
-    ProtocolVersion\ProtocolVersion,
-};
-use Innmind\Url\Url;
+use Innmind\Http\Message\Response;
 use Innmind\Templating\Engine;
 use Tests\AppName\TestCase;
 
@@ -29,14 +23,7 @@ class HelloTest extends TestCase
 
     public function testIndex()
     {
-        $handle = $this->container()->get('requestHandler');
-        $request = new ServerRequest(
-            Url::fromString('/'),
-            Method::get(),
-            new ProtocolVersion(1, 1)
-        );
-
-        $response = $handle($request);
+        $response = $this->request('get', '/');
 
         $this->assertInstanceOf(Response::class, $response);
         $this->assertSame(200, $response->statusCode()->value());
@@ -45,14 +32,7 @@ class HelloTest extends TestCase
 
     public function testHello()
     {
-        $handle = $this->container()->get('requestHandler');
-        $request = new ServerRequest(
-            Url::fromString('/hello/foo%20bar'),
-            Method::get(),
-            new ProtocolVersion(1, 1)
-        );
-
-        $response = $handle($request);
+        $response = $this->request('get', '/hello/foo%20bar');
 
         $this->assertInstanceOf(Response::class, $response);
         $this->assertSame(200, $response->statusCode()->value());
