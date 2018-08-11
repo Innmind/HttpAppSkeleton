@@ -1,0 +1,27 @@
+arguments:
+    routes: set<Innmind\Url\PathInterface>
+
+dependencies:
+    framework @innmind/http-framework/container.yml:
+        routes: $routes
+        controllers: $controllers
+        authenticator: $authentication.authenticator
+        routePatternToAuthenticate: '~/unknown~'
+
+    authentication @innmind/http-authentication/container.yml: []
+
+expose:
+    requestHandler: $requestHandler
+
+services:
+    requestHandler stack:
+        # - $framework.enforceHttps
+        - $framework.authenticate
+        - $framework.router
+
+    controllers map<string, Innmind\HttpFramework\Controller>:
+        - <index, $controllers.hello>
+        - <hello, $controllers.hello>
+
+    controllers:
+        hello AppName\Controller\Hello: []

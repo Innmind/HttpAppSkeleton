@@ -16,17 +16,18 @@
     },
     "require": {
         "php": "~7.2",
-        "innmind/http-server": "^1.0"
+        "innmind/http-server": "^1.0",
+        "innmind/http-framework": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "Innmind\\HttpAppSkeleton\\": "src/"
+            "AppName\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Innmind\\HttpAppSkeleton\\": "tests/",
-            "Fixture\\Innmind\\HttpAppSkeleton\\": "fixtures/"
+            "Tests\\AppName\\": "tests/",
+            "Fixture\\AppName\\": "fixtures/"
         }
     },
     "require-dev": {
