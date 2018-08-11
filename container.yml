@@ -1,5 +1,6 @@
 arguments:
     routes: set<Innmind\Url\PathInterface>
+    templates: Innmind\Url\PathInterface
 
 dependencies:
     framework @innmind/http-framework/container.yml:
@@ -9,6 +10,9 @@ dependencies:
         routePatternToAuthenticate: '~/unknown~'
 
     authentication @innmind/http-authentication/container.yml: []
+
+    templating @innmind/templating/container.yml:
+        templates: $templates
 
 expose:
     requestHandler: $requestHandler
@@ -24,4 +28,5 @@ services:
         - <hello, $controllers.hello>
 
     controllers:
-        hello AppName\Controller\Hello: []
+        hello AppName\Controller\Hello:
+            - $templating.engine

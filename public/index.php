@@ -55,7 +55,8 @@ new class extends Main
             ->put('routes', Set::of(
                 PathInterface::class,
                 new Path(__DIR__.'/../config/routes.yml')
-            ));
+            ))
+            ->put('templates', new Path(__DIR__.'/../templates'));
     }
 
     /**

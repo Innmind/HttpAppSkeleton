@@ -5,19 +5,15 @@ namespace Tests\AppName\Controller;
 
 use AppName\Controller\Hello;
 use Innmind\HttpFramework\Controller;
-use Innmind\Http\Message\{
-    ServerRequest,
-    Response,
+use Innmind\Http\{
+    Message\ServerRequest\ServerRequest,
+    Message\Response,
+    Message\Method\Method,
+    ProtocolVersion\ProtocolVersion,
 };
-use Innmind\Router\{
-    Route,
-    Route\Name,
-};
-use Innmind\Immutable\{
-    Map,
-    Str,
-};
-use PHPUnit\Framework\TestCase;
+use Innmind\Url\Url;
+use Innmind\Templating\Engine;
+use Tests\AppName\TestCase;
 
 class HelloTest extends TestCase
 {
@@ -25,19 +21,41 @@ class HelloTest extends TestCase
     {
         $this->assertInstanceOf(
             Controller::class,
-            new Hello
+            new Hello(
+                $this->createMock(Engine::class)
+            )
         );
     }
 
-    public function testInvokation()
+    public function testIndex()
     {
-        $response = (new Hello)(
-            $this->createMock(ServerRequest::class),
-            Route::of(new Name('index'), Str::of('GET /')),
-            new Map('string', 'string')
+        $handle = $this->container()->get('requestHandler');
+        $request = new ServerRequest(
+            Url::fromString('/'),
+            Method::get(),
+            new ProtocolVersion(1, 1)
         );
+
+        $response = $handle($request);
 
         $this->assertInstanceOf(Response::class, $response);
         $this->assertSame(200, $response->statusCode()->value());
+        $this->assertSame("Hello world!\n", (string) $response->body());
+    }
+
+    public function testHello()
+    {
+        $handle = $this->container()->get('requestHandler');
+        $request = new ServerRequest(
+            Url::fromString('/hello/foo%20bar'),
+            Method::get(),
+            new ProtocolVersion(1, 1)
+        );
+
+        $response = $handle($request);
+
+        $this->assertInstanceOf(Response::class, $response);
+        $this->assertSame(200, $response->statusCode()->value());
+        $this->assertSame("Hello foo bar!\n", (string) $response->body());
     }
 }
