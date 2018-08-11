@@ -1,0 +1,38 @@
+{
+    "name": "innmind/http-app-skeleton",
+    "type": "project",
+    "description": "http app skeleto,",
+    "keywords": ["http", "app"],
+    "homepage": "http://github.com/Innmind/HttpAppSkeleton",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Baptiste Langlade",
+            "email": "langlade.baptiste@gmail.com"
+        }
+    ],
+    "support": {
+        "issues": "http://github.com/Innmind/HttpAppSkeleton/issues"
+    },
+    "require": {
+        "php": "~7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Innmind\\HttpAppSkeleton\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Innmind\\HttpAppSkeleton\\": "tests/",
+            "Fixture\\Innmind\\HttpAppSkeleton\\": "fixtures/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "giorgiosironi/eris": "^0.10.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always"
+    }
+}
