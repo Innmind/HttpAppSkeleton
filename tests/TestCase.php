@@ -32,7 +32,7 @@ class TestCase extends BaseTestCase
         parent::setUp();
 
         $this->container = (new ContainerBuilder)(
-            new Path(__DIR__.'/../container.yml'),
+            new Path(__DIR__.'/../config/container.yml'),
             (new Map('string', 'mixed'))
                 ->put('routes', Set::of(
                     PathInterface::class,

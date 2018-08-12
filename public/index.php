@@ -53,7 +53,7 @@ new class extends Main
     private function handle(ServerRequest $request, MapInterface $environment): Response
     {
         $container = (new ContainerBuilder)(
-            new Path(__DIR__.'/../container.yml'),
+            new Path(__DIR__.'/../config/container.yml'),
             $environment
         );
         $handle = $container->get('requestHandler');
