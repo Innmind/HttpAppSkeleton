@@ -1,6 +1,7 @@
 arguments:
     routes: set<Innmind\Url\PathInterface>
     templates: Innmind\Url\PathInterface
+    debug: bool
 
 dependencies:
     framework @innmind/http-framework/container.yml:
@@ -19,9 +20,15 @@ expose:
 
 services:
     requestHandler stack:
+        - $requestHandler.debug
         # - $framework.enforceHttps
         - $framework.authenticate
         - $framework.router
+
+    requestHandler:
+        debug AppName\RequestHandler\Debug:
+            - '@decorated'
+            - $debug
 
     controllers map<string, Innmind\HttpFramework\Controller>:
         - <index, $controllers.hello>

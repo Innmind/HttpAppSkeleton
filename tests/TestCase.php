@@ -39,6 +39,7 @@ class TestCase extends BaseTestCase
                     new Path(__DIR__.'/../config/routes.yml')
                 ))
                 ->put('templates', new Path(__DIR__.'/../templates'))
+                ->put('debug', false)
         );
     }
 
